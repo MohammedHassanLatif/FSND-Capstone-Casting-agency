@@ -1,0 +1,162 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 12.3
+-- Dumped by pg_dump version 12.3
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: actors; Type: TABLE; Schema: public; Owner: hassanlatif
+--
+
+CREATE TABLE public.actors (
+    id integer NOT NULL,
+    name character varying NOT NULL,
+    age integer NOT NULL,
+    gender character varying NOT NULL
+);
+
+
+ALTER TABLE public.actors OWNER TO hassanlatif;
+
+--
+-- Name: actors_id_seq; Type: SEQUENCE; Schema: public; Owner: hassanlatif
+--
+
+CREATE SEQUENCE public.actors_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.actors_id_seq OWNER TO hassanlatif;
+
+--
+-- Name: actors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hassanlatif
+--
+
+ALTER SEQUENCE public.actors_id_seq OWNED BY public.actors.id;
+
+
+--
+-- Name: movies; Type: TABLE; Schema: public; Owner: hassanlatif
+--
+
+CREATE TABLE public.movies (
+    id integer NOT NULL,
+    title character varying NOT NULL,
+    release_date date NOT NULL,
+    genre character varying NOT NULL
+);
+
+
+ALTER TABLE public.movies OWNER TO hassanlatif;
+
+--
+-- Name: movies_id_seq; Type: SEQUENCE; Schema: public; Owner: hassanlatif
+--
+
+CREATE SEQUENCE public.movies_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.movies_id_seq OWNER TO hassanlatif;
+
+--
+-- Name: movies_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hassanlatif
+--
+
+ALTER SEQUENCE public.movies_id_seq OWNED BY public.movies.id;
+
+
+--
+-- Name: actors id; Type: DEFAULT; Schema: public; Owner: hassanlatif
+--
+
+ALTER TABLE ONLY public.actors ALTER COLUMN id SET DEFAULT nextval('public.actors_id_seq'::regclass);
+
+
+--
+-- Name: movies id; Type: DEFAULT; Schema: public; Owner: hassanlatif
+--
+
+ALTER TABLE ONLY public.movies ALTER COLUMN id SET DEFAULT nextval('public.movies_id_seq'::regclass);
+
+
+--
+-- Data for Name: actors; Type: TABLE DATA; Schema: public; Owner: hassanlatif
+--
+
+COPY public.actors (id, name, age, gender) FROM stdin;
+10	gopi	22	male
+11	rish	22	male
+\.
+
+
+--
+-- Data for Name: movies; Type: TABLE DATA; Schema: public; Owner: hassanlatif
+--
+
+COPY public.movies (id, title, release_date, genre) FROM stdin;
+10	Avengers	2019-01-02	SuperHero
+9	Avengers 2	2019-01-02	SuperHero
+11	Avengers	2019-01-02	SuperHero
+\.
+
+
+--
+-- Name: actors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hassanlatif
+--
+
+SELECT pg_catalog.setval('public.actors_id_seq', 11, true);
+
+
+--
+-- Name: movies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hassanlatif
+--
+
+SELECT pg_catalog.setval('public.movies_id_seq', 11, true);
+
+
+--
+-- Name: actors actors_pkey; Type: CONSTRAINT; Schema: public; Owner: hassanlatif
+--
+
+ALTER TABLE ONLY public.actors
+    ADD CONSTRAINT actors_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: movies movies_pkey; Type: CONSTRAINT; Schema: public; Owner: hassanlatif
+--
+
+ALTER TABLE ONLY public.movies
+    ADD CONSTRAINT movies_pkey PRIMARY KEY (id);
+
+
+--
+-- PostgreSQL database dump complete
+--
