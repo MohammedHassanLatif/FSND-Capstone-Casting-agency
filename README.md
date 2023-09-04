@@ -270,4 +270,4 @@ Success Response:
 
 ## Authors
 
-Rishabh Gajra and The udacity team that made the starter code and Project tasks.
+Hassan Latif and The udacity team that made the starter code and Project tasks.
