@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Casting Agency</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body class="container">
+        <h1 class="title">Welcome to Casting Agency</h1>
+        <button class="login-button" id="toggle" onclick="myFunction()">Log in</button>
+    </body>
+
+    <script>
+    function myFunction() {
+        var change = document.getElementById("toggle");
+        if (change.innerHTML == "Log in")
+        {
+            change.innerHTML = "Nah";
+            }
+        else {
+            change.innerHTML = "Log in";
+            }
+            }
+    </script>
+</html>

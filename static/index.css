@@ -1,0 +1,32 @@
+html{
+    background: url("alex-litvin-MAYsdoYpGuk-unsplash.jpg");
+    background-size: cover;
+    height: 500px;
+    background-origin: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    top: 65%;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+    opacity: 100%;
+}
+
+.login-button {
+    border: none;
+    outline: none;
+    font-size: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
