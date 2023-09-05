@@ -12,7 +12,7 @@ This is the capstone project of Udacity fullstack nanodegree program, which demo
 
 ### Installing Dependencies
 
-#### Python 3.7
+#### Python 3.9
 
 Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
