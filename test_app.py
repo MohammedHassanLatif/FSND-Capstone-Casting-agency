@@ -17,7 +17,7 @@ class MainTestCase(unittest.TestCase):
         """Define test variables and initialize app."""
         self.app = create_app()
         self.client = self.app.test_client
-        self.database_name = "casting_agency_test"
+        self.database_name = "postgres"
         self.database_path = "postgres://{}/{}".format('localhost:5432', self.database_name)
         setup_db(self.app, self.database_path)
 
@@ -53,7 +53,6 @@ class MainTestCase(unittest.TestCase):
         }
         res = self.client().post('/movies', json=new_movie, headers=headers)
         data = json.loads(res.data)
-
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
 
