@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: actors; Type: TABLE; Schema: public; Owner: lindachen
+-- Name: actors; Type: TABLE; Schema: public; Owner: hassanlatif
 --
 
 CREATE TABLE public.actors (
@@ -33,10 +33,10 @@ CREATE TABLE public.actors (
 );
 
 
-ALTER TABLE public.actors OWNER TO lindachen;
+ALTER TABLE public.actors OWNER TO hassanlatif;
 
 --
--- Name: actors_id_seq; Type: SEQUENCE; Schema: public; Owner: lindachen
+-- Name: actors_id_seq; Type: SEQUENCE; Schema: public; Owner: hassanlatif
 --
 
 CREATE SEQUENCE public.actors_id_seq
@@ -48,17 +48,17 @@ CREATE SEQUENCE public.actors_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.actors_id_seq OWNER TO lindachen;
+ALTER TABLE public.actors_id_seq OWNER TO hassanlatif;
 
 --
--- Name: actors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: lindachen
+-- Name: actors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hassanlatif
 --
 
 ALTER SEQUENCE public.actors_id_seq OWNED BY public.actors.id;
 
 
 --
--- Name: movies; Type: TABLE; Schema: public; Owner: lindachen
+-- Name: movies; Type: TABLE; Schema: public; Owner: hassanlatif
 --
 
 CREATE TABLE public.movies (
@@ -68,10 +68,10 @@ CREATE TABLE public.movies (
 );
 
 
-ALTER TABLE public.movies OWNER TO lindachen;
+ALTER TABLE public.movies OWNER TO hassanlatif;
 
 --
--- Name: movies_id_seq; Type: SEQUENCE; Schema: public; Owner: lindachen
+-- Name: movies_id_seq; Type: SEQUENCE; Schema: public; Owner: hassanlatif
 --
 
 CREATE SEQUENCE public.movies_id_seq
@@ -83,31 +83,31 @@ CREATE SEQUENCE public.movies_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.movies_id_seq OWNER TO lindachen;
+ALTER TABLE public.movies_id_seq OWNER TO hassanlatif;
 
 --
--- Name: movies_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: lindachen
+-- Name: movies_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hassanlatif
 --
 
 ALTER SEQUENCE public.movies_id_seq OWNED BY public.movies.id;
 
 
 --
--- Name: actors id; Type: DEFAULT; Schema: public; Owner: lindachen
+-- Name: actors id; Type: DEFAULT; Schema: public; Owner: hassanlatif
 --
 
 ALTER TABLE ONLY public.actors ALTER COLUMN id SET DEFAULT nextval('public.actors_id_seq'::regclass);
 
 
 --
--- Name: movies id; Type: DEFAULT; Schema: public; Owner: lindachen
+-- Name: movies id; Type: DEFAULT; Schema: public; Owner: hassanlatif
 --
 
 ALTER TABLE ONLY public.movies ALTER COLUMN id SET DEFAULT nextval('public.movies_id_seq'::regclass);
 
 
 --
--- Data for Name: actors; Type: TABLE DATA; Schema: public; Owner: lindachen
+-- Data for Name: actors; Type: TABLE DATA; Schema: public; Owner: hassanlatif
 --
 
 COPY public.actors (id, name, age, gender, movie_id) FROM stdin;
@@ -119,7 +119,7 @@ COPY public.actors (id, name, age, gender, movie_id) FROM stdin;
 
 
 --
--- Data for Name: movies; Type: TABLE DATA; Schema: public; Owner: lindachen
+-- Data for Name: movies; Type: TABLE DATA; Schema: public; Owner: hassanlatif
 --
 
 COPY public.movies (id, title, release_date) FROM stdin;
@@ -131,21 +131,21 @@ COPY public.movies (id, title, release_date) FROM stdin;
 
 
 --
--- Name: actors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: lindachen
+-- Name: actors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hassanlatif
 --
 
 SELECT pg_catalog.setval('public.actors_id_seq', 10, true);
 
 
 --
--- Name: movies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: lindachen
+-- Name: movies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hassanlatif
 --
 
 SELECT pg_catalog.setval('public.movies_id_seq', 15, true);
 
 
 --
--- Name: actors actors_pkey; Type: CONSTRAINT; Schema: public; Owner: lindachen
+-- Name: actors actors_pkey; Type: CONSTRAINT; Schema: public; Owner: hassanlatif
 --
 
 ALTER TABLE ONLY public.actors
@@ -153,7 +153,7 @@ ALTER TABLE ONLY public.actors
 
 
 --
--- Name: movies movies_pkey; Type: CONSTRAINT; Schema: public; Owner: lindachen
+-- Name: movies movies_pkey; Type: CONSTRAINT; Schema: public; Owner: hassanlatif
 --
 
 ALTER TABLE ONLY public.movies
@@ -161,7 +161,7 @@ ALTER TABLE ONLY public.movies
 
 
 --
--- Name: actors actors_movie_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: lindachen
+-- Name: actors actors_movie_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: hassanlatif
 --
 
 ALTER TABLE ONLY public.actors

@@ -44,8 +44,8 @@ class MainTestCase(unittest.TestCase):
 
     def test_post_movie(self):
         new_movie = {
-            'title': 'Call Me by Your Name',
-            'release_date': '2017-10-20'
+            'title': 'The Dark Knight',
+            'release_date': '2008-07-24'
         }
         headers = {
             'Content-Type': 'application/json',
