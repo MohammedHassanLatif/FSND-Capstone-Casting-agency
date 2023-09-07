@@ -18,7 +18,8 @@ class MainTestCase(unittest.TestCase):
         self.app = create_app()
         self.client = self.app.test_client
         self.database_name = "postgres"
-        self.database_path = "postgres://{}/{}".format('localhost:5432', self.database_name)
+        self.database_path = "postgres://{}/{}".format(
+            'localhost:5432', self.database_name)
         setup_db(self.app, self.database_path)
 
         with self.app.app_context():
@@ -92,7 +93,7 @@ class MainTestCase(unittest.TestCase):
             'release_date': '2020-11-01'
         }
         auth = {
-            'Authorization': "Bearer {}".format(director_token) 
+            'Authorization': "Bearer {}".format(director_token)
         }
         res = self.client().patch('/movies/100', json=edit_movie, headers=auth)
         data = json.loads(res.data)
@@ -308,7 +309,7 @@ class MainTestCase(unittest.TestCase):
     def test_403_unauth_delete_movie(self):
         auth = {
             'Authorization': "Bearer {}".format(director_token)
-            }
+        }
         res = self.client().delete('/movies/6', headers=auth)
         data = json.loads(res.data)
 
@@ -324,7 +325,7 @@ class MainTestCase(unittest.TestCase):
         headers = {
             'Content-Type': 'application/json',
             'Authorization': "Bearer {}".format(director_token)
-            }
+        }
         res = self.client().post('/movies', json=new_movie, headers=headers)
         data = json.loads(res.data)
 

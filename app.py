@@ -12,6 +12,7 @@ from sqlalchemy import exc
 from auth import AuthError, requires_auth
 from models import db_drop_and_create_all, setup_db, Movie, Actor
 
+
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__)
@@ -43,7 +44,7 @@ def create_app(test_config=None):
             return jsonify({
                 'success': True,
                 'movies': [movie.format() for movie in movies]
-                }), 200
+            }), 200
         except Exception:
             abort(500)
 
@@ -54,7 +55,7 @@ def create_app(test_config=None):
         movie = Movie(
             title=data['title'],
             release_date=data['release_date']
-            )
+        )
         if movie.title == '' or movie.release_date == '':
             abort(422)
 
@@ -64,7 +65,7 @@ def create_app(test_config=None):
             return jsonify({
                 'success': True,
                 'movie': movie.format()
-                }), 200
+            }), 200
         except Exception as e:
             print(e)
             abort(500)
@@ -88,7 +89,7 @@ def create_app(test_config=None):
             return jsonify({
                 'success': True,
                 'movie': [movie.format()]
-                }), 200
+            }), 200
         except Exception:
             abort(500)
 
@@ -102,7 +103,7 @@ def create_app(test_config=None):
                 return jsonify({
                     'success': True,
                     'delete': id
-                    }), 200
+                }), 200
             except Exception:
                 db.session.rollback()
                 abort(500)
@@ -116,9 +117,9 @@ def create_app(test_config=None):
         try:
             actors = Actor.query.all()
             return jsonify({
-                            'success': True,
-                            'actors': [actor.format() for actor in actors]
-                            }), 200
+                'success': True,
+                'actors': [actor.format() for actor in actors]
+            }), 200
         except Exception:
             abort(500)
 
@@ -131,7 +132,7 @@ def create_app(test_config=None):
             age=data['age'],
             gender=data['gender'],
             movie_id=data['movie_id']
-            )
+        )
         if actor.name == '' or actor.age == '' or actor.gender == '':
             abort(422)
         try:
@@ -140,7 +141,7 @@ def create_app(test_config=None):
             return jsonify({
                 'success': True,
                 'actor': actor.format()
-                }), 200
+            }), 200
         except Exception:
             abort(500)
 
@@ -163,7 +164,7 @@ def create_app(test_config=None):
                 return jsonify({
                     'success': True,
                     'actor': [actor.format()]
-                    }), 200
+                }), 200
             except Exception:
                 abort(500)
         else:
@@ -179,7 +180,7 @@ def create_app(test_config=None):
                 return jsonify({
                     'success': True,
                     'delete': id
-                    }), 200
+                }), 200
             except Exception:
                 db.session.rollback()
                 abort(500)
@@ -193,7 +194,7 @@ def create_app(test_config=None):
             "success": False,
             "error": 400,
             "message": "Bad Request, please check your inputs"
-            }), 400
+        }), 400
 
     @app.errorhandler(404)
     def not_found(error):
@@ -201,7 +202,7 @@ def create_app(test_config=None):
             "success": False,
             "error": 404,
             "message": "resource not found."
-            }), 404
+        }), 404
 
     @app.errorhandler(500)
     def internal_error(error):
@@ -209,7 +210,7 @@ def create_app(test_config=None):
             "success": False,
             "error": 500,
             "message": "Sorry, there's a problem on our end."
-            }), 500
+        }), 500
 
     @app.errorhandler(422)
     def unprocessable(error):
@@ -217,7 +218,7 @@ def create_app(test_config=None):
             'success': False,
             'error': 422,
             'message': 'unprocessable. Check your input.'
-          }), 422
+        }), 422
 
     @app.errorhandler(403)
     def forbidden(error):
@@ -225,7 +226,7 @@ def create_app(test_config=None):
             "success": False,
             "error": 403,
             "message": "You are not allowed to access this resource",
-                }), 403
+        }), 403
 
     @app.errorhandler(AuthError)
     def auth_error(ex):

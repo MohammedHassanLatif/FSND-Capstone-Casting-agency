@@ -29,7 +29,7 @@ class Movie(db.Model):
     actors = db.relationship('Actor', cascade="all, delete", backref='movies')
 
     def format(self):
-        return{
+        return {
             'id': self.id,
             'title': self.title,
             'release_date': self.release_date
@@ -56,7 +56,7 @@ class Actor(db.Model):
     movie_id = Column(Integer, db.ForeignKey('movies.id'), nullable=False)
 
     def format(self):
-        return{
+        return {
             'id': self.id,
             'name': self.name,
             'age': self.age,

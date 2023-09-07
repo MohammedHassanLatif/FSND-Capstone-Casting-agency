@@ -55,7 +55,7 @@ From within the directory first ensure you are working using your created virtua
 
 To run the server, execute:
 
-```bash
+```zsh
 . ./setup.sh
 flask run
 ```

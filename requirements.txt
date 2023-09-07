@@ -3,7 +3,9 @@ attrs==20.1.0
 authlib==1.0
 cffi==1.14.2
 click==7.1.2
+certifi==2023.7.22
 cryptography==41.0.3
+charset-normalizer==2.0.12
 ecdsa==0.14.1
 Flask==1.1.2
 Flask-Cors==3.0.8
@@ -11,6 +13,7 @@ Flask-Migrate==2.5.3
 Flask-Script==2.0.6
 Flask-SQLAlchemy==2.4.4
 gunicorn==20.0.4
+idna==3.4
 iniconfig==1.0.1
 itsdangerous==1.1.0
 jose==1.0.0
