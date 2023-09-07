@@ -1,6 +1,9 @@
 import os
 import json
+<<<<<<< HEAD
 import jwt
+=======
+>>>>>>> heroku/main
 from jose import jwt
 from collections.abc import Mapping
 from werkzeug.datastructures import ImmutableMultiDict
@@ -11,7 +14,6 @@ from sqlalchemy import exc
 
 from auth import AuthError, requires_auth
 from models import db_drop_and_create_all, setup_db, Movie, Actor
-
 
 def create_app(test_config=None):
     # create and configure the app
