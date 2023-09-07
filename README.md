@@ -65,7 +65,7 @@ flask run
 setup.sh has all the environment variables needed for the project. The app may fail if they are not set properly. If that happens just copy paste lines from setup.sh on you CLI.
 
 # Project deployed at
-
+https://udacitycapstone-casting-131b527c73e3.herokuapp.com/
 https://fsnd-casting-agency-udacity.herokuapp.com/
 
 ###### To test live APIs the only way right now to do this is curl requests. Add Auth token headers from logins below to test.

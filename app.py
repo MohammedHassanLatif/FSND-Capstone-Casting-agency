@@ -1,5 +1,6 @@
 import os
 import json
+import jwt
 from jose import jwt
 from collections.abc import Mapping
 from werkzeug.datastructures import ImmutableMultiDict
