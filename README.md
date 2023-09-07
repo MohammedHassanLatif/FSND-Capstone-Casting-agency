@@ -152,8 +152,8 @@ Success Response:
       },
       {
          "id":6,
+         "title":"The Dark Knight"
          "release_date":"2008-07-24",
-         "title":"he Dark Knight"
       }
    ],
    "success":True
@@ -170,10 +170,11 @@ Success Response:
   {
    "actors":[
       {
-         "age":22,
-         "gender":"male",
-         "id":10,
-         "name":"rish"
+         "id":3,
+         "name":"Timothée Chalamet"
+         "age":24,
+         "gender":'M',
+         "movie_id": 6,
       }
    ],
    "success":True
@@ -188,7 +189,7 @@ Returns: deleted movie's ID
 Success Response:
 
 ```
-{'deleted': 8, 'success': True}
+{'deleted': 3, 'success': True}
 ```
 
 DELETE '/actors/<int:actor_id>'
@@ -199,7 +200,7 @@ Returns:the deleted actor's ID
 Success Response:
 
 ```
-{'deleted': 9, 'success': True}
+{'deleted': 6, 'success': True}
 ```
 
 POST '/movies'
@@ -209,7 +210,7 @@ Required Data Arguments: Json data
 Success Response:
 
 ```
-{'movie_id': 11, 'success': True}
+{'movie_id': 21, 'success': True}
 ```
 
 POST '/actors'
@@ -222,7 +223,7 @@ Required Data Arguments: Json data
 Success Response:
 
 ```
-{'actor_id': 11, 'success': True}
+{'actor_id': 7, 'success': True}
 ```
 
 PATCH '/movies/<int:movie_id>'
@@ -235,10 +236,9 @@ Success Response:
 ```
 {
    "movie":{
-      "genre":"SuperHero",
-      "id":9,
-      "release_date":"2019-01-02",
-      "title":"Avengers 2"
+      "id":5,
+      "title":"The Dark Knight Rises"
+      "release_date":"2012-07-20",
    },
    "success":True
 }
@@ -254,10 +254,11 @@ Success Response:
 ```
 {
    "actor":{
-      "age":22,
-      "gender":"male",
-      "id":10,
-      "name":"gopi"
+      "id":4,
+      "name":"Christian Bale",
+      "age":49,
+      "gender":"M",
+      "movie_id": 6
    },
    "success":True
 }
@@ -266,3 +267,5 @@ Success Response:
 ## Authors
 
 Hassan Latif and The udacity team that made the starter code and Project tasks.
+
+The image of the homepage used in this project is contributed to Alex Litvin on Unsplash
