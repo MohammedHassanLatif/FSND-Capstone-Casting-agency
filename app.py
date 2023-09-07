@@ -1,9 +1,6 @@
 import os
 import json
-<<<<<<< HEAD
 import jwt
-=======
->>>>>>> heroku/main
 from jose import jwt
 from collections.abc import Mapping
 from werkzeug.datastructures import ImmutableMultiDict

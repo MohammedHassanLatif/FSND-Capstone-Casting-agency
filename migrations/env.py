@@ -1,8 +1,5 @@
 from __future__ import with_statement
-<<<<<<< HEAD
 from flask import current_app
-=======
->>>>>>> heroku/main
 
 import logging
 from logging.config import fileConfig
@@ -25,10 +22,7 @@ logger = logging.getLogger('alembic.env')
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-<<<<<<< HEAD
-=======
 from flask import current_app
->>>>>>> heroku/main
 config.set_main_option(
     'sqlalchemy.url',
     str(current_app.extensions['migrate'].db.engine.url).replace('%', '%%'))
