@@ -17,8 +17,8 @@ def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__)
     app.secret_key = 'SECRET'
+    CORS(app)
     setup_db(app)
-    CORS(app, resources={"/": {"origins": "*"}})
 
     @app.after_request
     def after_request(response):
