@@ -3,7 +3,7 @@ from sqlalchemy import Column, String, Integer
 from flask_migrate import Migrate, MigrateCommand
 from datetime import datetime
 
-from app.app import create_app
+from app import create_app
 from models import db, Movie, Actor
 
 app = create_app()
