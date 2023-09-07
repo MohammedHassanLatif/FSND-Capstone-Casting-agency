@@ -25,7 +25,7 @@ We recommend working within a virtual environment whenever using Python for proj
 Once you have your virtual environment setup and running, install dependencies by naviging to the `/backend` directory and running:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 This will install all of the required packages we selected within the `requirements.txt` file.
@@ -66,33 +66,28 @@ setup.sh has all the environment variables needed for the project. The app may f
 
 # Project deployed at
 https://udacitycapstone-casting-131b527c73e3.herokuapp.com/
-https://fsnd-casting-agency-udacity.herokuapp.com/
 
 ###### To test live APIs the only way right now to do this is curl requests. Add Auth token headers from logins below to test.
 
 OATH login url. There are three logins atm, JWTs for these appear in the url after successfull login. Those tokens are needed to test the different APIs.
 
-
-https://dev-fc34y9lq.us.auth0.com/authorize?audience=CastingAgencyAPI&response_type=token&client_id=XeqwOu6PsAeC0bwm2dd6giNP0JJaaxIe&redirect_uri=http://localhost:8080/-results
-
 https://hassanlatif.uk.auth0.com/authorize?audience=CastingAgencyAPI&response_type=token&client_id=77ne8DJPJbJfoCGWFsfKAhAamJrMkp0d&redirect_uri=http://localhost:8080/
 
-
-casting Assistant token castingassistant@example.com Qwerty1234
-
-```
-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJWRXNSUnYwWUZRUDdtU3g5VGJ0TSJ9.eyJpc3MiOiJodHRwczovL2Rldi1mYzM0eTlscS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYyMjAzYzNjMTNiMTMwMjI4ZjgxM2FhIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTU5NjE0MTQ2NSwiZXhwIjoxNTk2MjI3ODY0LCJhenAiOiJYZXF3T3U2UHNBZUMwYndtMmRkNmdpTlAwSkphYXhJZSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsidmlldzphY3RvcnMiLCJ2aWV3Om1vdmllcyJdfQ.U39-EK_wkLbqrUnfsTWb7ih1Djn9L30GwdZwanfKVNyXIsa9BDcxd5yUxH8HD_owfAZWxcqqf2hCjJ_wcQDhuFD_Z8jDYvECtFx_KYWncmf2P4vhm_mNf6ENS2Hi2nNUV6YE7X4Mv3rsktI3GrZFppiMVKfNODRf3EbfAOw5VwqQCE8u3Paiurfyoya7frltSOeuf8pU6o3hVkJXwPSlnpN6Rvos_JL1JvodoZFJQJmtWn4CObJ-Nut-17aFjH1gm9ZsZzUfq-ECfcD74e7RKU28y_Rw_0BS6nFO9OVFVJGHuT3JyoCfxfuneNr5Ao6RYedGBqAw4R5l6TtQuxKQhw
+casting Assistant token castingassistant@udacity.com udacity123!
 
 ```
-
-Casting director token castingdirector@example.com Qwerty1234
-
-```
-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJWRXNSUnYwWUZRUDdtU3g5VGJ0TSJ9.eyJpc3MiOiJodHRwczovL2Rldi1mYzM0eTlscS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYyMjA2MjI1Yzg0OGYwMDM3YzQxNTJmIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTU5NjE0MTU2MCwiZXhwIjoxNTk2MjI3OTU5LCJhenAiOiJYZXF3T3U2UHNBZUMwYndtMmRkNmdpTlAwSkphYXhJZSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiYWRkOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJ2aWV3OmFjdG9ycyIsInZpZXc6bW92aWVzIl19.Zf0BsuoZdBFrkHjIEuPDW5Udt6aJn6qUMWIDpOaoTBxhALV2wRt1aV9qMn9PHihG8RZ_N8rEjpOm6AJGzT-MsDfKUTuF0Ah7CAME8hJ_AdWR0egsjoqb7bosn-cu6VSQNtb7O039dOgm0uX23G95nrbobbfeLg8S3ipSmsyO3IB1B78ebV2NCM8J64DXMCsQwvkJl4OKsNjc0nzxBk6fcjVVkUfftZJW45V6H-NU8Ljc15At1lxQ4SRbdQ3AEpH9lbptCKpKGY-QdAeEgD_gP3uffJbIGfjPEDWy-NMRTt-2ika134hnDvTXEspALVAKHchcp6pRw9pMr8LFmRvLPA
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjNPMTlNbnJwT09YZWhwM0hBb0RfZCJ9.eyJpc3MiOiJodHRwczovL2hhc3NhbmxhdGlmLnVrLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGY2MmM4YmMxODU0MWM4NDJjNzJiODQiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjk0MDAwNjUwLCJleHAiOjE2OTQwMDc4NTAsImF6cCI6Ijc3bmU4REpQSmJKZm9DR1dGc2ZLQWhBYW1Kck1rcDBkIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.XFdHW15vZa5V1zPNyMeLun5W_RTaWZKbKVY69r-8xQG6Wxm1sK3lF35VeInrA7dAuXdiy8G5r0X0sc_2RN7cLPO9bWE-SaAmXs_iEpZmG_zo1mVrhhYLbYO4gHBVP1-25XGR7ExwDI_NtHSsROau0nIxUyK4xo-v7Ayp7eNF61ABD-sauEcxFrDYNMZsFf69a0q8PV5JrQhilM2DtC7RypSUz5P6Li2X-2WqeGb10Pyjog3i04JP4wfWliS88H6WcfKUaddnUNkZasR2z5YSz0FQYB2XiqPdxEhYyCiqayhmdSLu8gFBJGmoLS_Ke1_j4ZOtVYZxtv4CDM5bfXv0cg
 
 ```
 
-Executive Producer executiveproducer@example.com Qwerty1234
+Casting director token castingdirector@udacity.com udacity123!
+
+```
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjNPMTlNbnJwT09YZWhwM0hBb0RfZCJ9.eyJpc3MiOiJodHRwczovL2hhc3NhbmxhdGlmLnVrLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGY2MmNjNDliNzRiMWVhNTJhMjNiYjkiLCJhdWQiOiJDYXN0aW5nQWdlbmN5QVBJIiwiaWF0IjoxNjk0MDAwODI5LCJleHAiOjE2OTQwMDgwMjksImF6cCI6Ijc3bmU4REpQSmJKZm9DR1dGc2ZLQWhBYW1Kck1rcDBkIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyJdfQ.KnlPhyXrkxAFAL8bHISxXAtolE6RhI_fA9iGkPd6NUeQovePUYNA9nEDgmxdD1gzku_DKcAete1K4dt7In5m71daQ2pV9VKGtckw6qgyjkDCa821CuE_ZtmEwUCXFMbdMNeX-Nx5OpCGD51qCW-eOLD4cJ6rgrM4YHNrBlga3Zb2jJe1AF9COwhjyL8aYI6mbGO7XfCSwW4ICzkMizFO9M1CUmzBKdrVyXui8LNmcrZrf4m1WTSNFavb8gmT9R0eE63M64dhUnwzCgidpCOiwrt88hsyweCHfklwFpvpA4B2gqfBhfL8dQeub-WBNsQvKtOKBRByhkwhGazR1kpVZw
+
+```
+
+Executive Producer executiveproducer@udacity.com udacity123!
 
 ```
 eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJWRXNSUnYwWUZRUDdtU3g5VGJ0TSJ9.eyJpc3MiOiJodHRwczovL2Rldi1mYzM0eTlscS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWYyMjRkNGQ1Yzg0OGYwMDM3YzQxNzFkIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeUFQSSIsImlhdCI6MTU5NjE0MTUwNCwiZXhwIjoxNTk2MjI3OTAzLCJhenAiOiJYZXF3T3U2UHNBZUMwYndtMmRkNmdpTlAwSkphYXhJZSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiYWRkOmFjdG9ycyIsImFkZDptb3ZpZXMiLCJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInZpZXc6YWN0b3JzIiwidmlldzptb3ZpZXMiXX0.BgIe6xAaR5YqxM7j0NFjjLLctZnAKIp2x_q93sZPH8rBkCp3HjSDRLlqmz0KyeEwPyBMjLxQabbr3InJQk8OTq8S7rjoepgPs_zHF3mJrjUqZ3V3JaRX5_IvDf5J_-PfV-I6vxz42q1Mb1wMTBOHxOxj7MvtZ0JSycNGy3aRg1h0RsslV1Zyrcsx5cWk6xstpBylBEhaOTwbqHQTWZklWDE2eRnRAC3YYWrHpIy_xepcn8HNxfBoIFWr11SYxGMkYXEMqRDbQ8UqnUcUpOzxqMJXG913cf9YZegljhEiyZwPtsdlW92KNLNYKkLEPbTPXBwEQl_UmsD769fKc_egvA
@@ -105,8 +100,8 @@ To run the tests, run
 ```
 dropdb casting_agency_test
 createdb casting_agency_test
-psql casting_agency_test<casting_agency_test.psql
-python test_flaskr.py
+psql casting_agency_test<casting_agency.psql
+python3 test_flaskr.py
 ```
 
 The tests print data returned from the APIs along with API logs.
@@ -151,16 +146,14 @@ Success Response:
 {
    "movies":[
       {
-         "genre":"SuperHero",
-         "id":9,
-         "release_date":"2019-01-02",
-         "title":"Avengers"
+         "id":3,
+         "release_date":"2008-07-24",
+         "title":"he Dark Knight"
       },
       {
-         "genre":"SuperHero",
-         "id":10,
-         "release_date":"2019-01-02",
-         "title":"Avengers"
+         "id":6,
+         "release_date":"2008-07-24",
+         "title":"he Dark Knight"
       }
    ],
    "success":True
