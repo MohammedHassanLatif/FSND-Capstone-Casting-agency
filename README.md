@@ -125,7 +125,7 @@ Errors are returned as JSON objects in the following format:
 
 ### RBAC
 
-in this web app there's three roles in addtion to the anonymous and feshly signed up user.
+in this web app there's three roles in addtion to the anonymous and freshly signed up user.
 
 1- Casting-asistant this user can view actors and movies in list and in detalis
 
@@ -138,14 +138,14 @@ in this web app there's three roles in addtion to the anonymous and feshly signe
 
 in this web app there's endpoints to view actors and movies in list and in details, there's endpoints to to add movies and actors and also to patch and delete them.
 
-GET '/actors'
-POST '/actors'
-PATCH '/actors/<actor_id>'
-DELETE '/actors/<actor_id>'
-GET '/movies'
-GET '/actors'
-POST '/actors'
-PATCH '/actors/<actor_id>'
+GET '/actors' 
+POST '/actors' 
+PATCH '/actors/<actor_id>' 
+DELETE '/actors/<actor_id>' 
+GET '/movies' 
+GET '/actors' 
+POST '/actors' 
+PATCH '/actors/<actor_id>' 
 DELETE '/actors/<actor_id>'
 
 GET '/movies'
@@ -160,13 +160,13 @@ Success Response:
    "movies":[
       {
          "id":3,
-         "release_date":"2008-07-24",
-         "title":"he Dark Knight"
+         "title":"The Dark Knight",
+         "release_date":"2008-07-24"
       },
       {
          "id":6,
-         "title":"The Dark Knight"
-         "release_date":"2008-07-24",
+         "title":"The Dark Knight",
+         "release_date":"2008-07-24"
       }
    ],
    "success":True
@@ -202,7 +202,7 @@ Returns: deleted movie's ID
 Success Response:
 
 ```
-{'deleted': 3, 'success': True}
+{'deleted': 6, 'success': True}
 ```
 
 DELETE '/actors/<int:actor_id>'
@@ -228,11 +228,8 @@ Success Response:
 
 POST '/actors'
 Post a new actor in a database.
-
 Required URL Arguments: None
-
 Required Data Arguments: Json data
-
 Success Response:
 
 ```

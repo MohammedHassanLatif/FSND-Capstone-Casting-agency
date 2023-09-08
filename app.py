@@ -65,8 +65,7 @@ def create_app(test_config=None):
                 'success': True,
                 'movie': movie.format()
             }), 200
-        except Exception as e:
-            print(e)
+        except Exception:
             abort(500)
 
     @app.route('/movies/<int:id>', methods=['GET', 'PATCH'])

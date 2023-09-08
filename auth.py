@@ -6,12 +6,8 @@ from jose import jwt
 from urllib.request import urlopen
 from flask_sqlalchemy import SQLAlchemy
 
-# AUTH0_DOMAIN = 'hassanlatif.uk.auth0.com'
-# ALGORITHMS = ['RS256']
-# API_AUDIENCE = 'CastingAgencyAPI'
-
 AUTH0_DOMAIN = os.environ.get('AUTH0_DOMAIN')
-ALGORITHMS = ['RS256']
+ALGORITHMS = os.environ.get('RS256')
 API_AUDIENCE = os.environ.get('API_AUDIENCE')
 
 # AuthError Exception

@@ -332,3 +332,7 @@ class MainTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 403)
         self.assertEqual(data['message'],
                          'You are not allowed to access this resource')
+        
+# Make the tests conveniently executable
+if __name__ == "__main__":
+    unittest.main()
